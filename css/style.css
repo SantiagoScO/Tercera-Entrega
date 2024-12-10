@@ -1,0 +1,138 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin: 0;
+}
+
+#task-manager {
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+#task-manager h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#new-task {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#add-task {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+#add-task:hover {
+  background-color: #0056b3;
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+button.delete {
+  --main-focus: #2d8cf0;
+  --font-color: #dedede;
+  --bg-color-sub: #222;
+  --bg-color: #323232;
+  --main-color: #dedede;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+button.delete, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+button.delete .button__text {
+  transform: translateX(33px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+button.delete .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.delete .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+button.delete:hover {
+  background: var(--bg-color);
+}
+
+button.delete:hover .button__text {
+  color: transparent;
+}
+
+button.delete:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+button.delete:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
